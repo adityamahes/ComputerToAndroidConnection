@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Grid Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gridContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Row 1 -->
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:text="UP"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnLeft"
+            app:layout_constraintEnd_toStartOf="@+id/btnForward"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:backgroundTint="#333333" />
+
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:text="FWD"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnStill"
+            app:layout_constraintEnd_toStartOf="@+id/btnDown"
+            app:layout_constraintStart_toEndOf="@+id/btnUp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:backgroundTint="#333333" />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:text="DOWN"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnForward"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:backgroundTint="#333333" />
+
+        <!-- Row 2 -->
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:text="LEFT"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnBackward"
+            app:layout_constraintEnd_toStartOf="@+id/btnStill"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnUp"
+            tools:backgroundTint="#333333" />
+
+        <Button
+            android:id="@+id/btnStill"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:clickable="false"
+            android:text="STILL"
+            android:textColor="#000000"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnBackward"
+            app:layout_constraintEnd_toStartOf="@+id/btnRight"
+            app:layout_constraintStart_toEndOf="@+id/btnLeft"
+            app:layout_constraintTop_toBottomOf="@+id/btnForward"
+            tools:backgroundTint="#00FF00" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:text="RIGHT"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnBackward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnStill"
+            app:layout_constraintTop_toBottomOf="@+id/btnDown"
+            tools:backgroundTint="#333333" />
+
+        <!-- Row 3 -->
+        <!-- Empty Space Left -->
+        <View
+            android:id="@+id/viewSpacerLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnBackward"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLeft" />
+
+        <Button
+            android:id="@+id/btnBackward"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:text="BWD"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/viewSpacerRight"
+            app:layout_constraintStart_toEndOf="@+id/viewSpacerLeft"
+            app:layout_constraintTop_toBottomOf="@+id/btnStill"
+            tools:backgroundTint="#333333" />
+
+        <!-- Empty Space Right -->
+        <View
+            android:id="@+id/viewSpacerRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnBackward"
+            app:layout_constraintTop_toBottomOf="@+id/btnRight" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
